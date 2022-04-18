@@ -69,7 +69,7 @@
 // Evaluate "x", if it isn't NULL, print a warning
 #define SF_PLUGIN_EXPECT_NULL(x) \
     { void *res; if ((res = (x)) != NULL) \
-        qWarning("QPA-SF: %s in %s returned %x", (#x), __func__, (unsigned int)res); }
+        qWarning("QPA-SF: %s in %s returned %p", (#x), __func__, res); }
 
 // Evaluate "x", if it is NULL, exit with a fatal error
 #define SF_PLUGIN_FATAL(x) \
@@ -78,7 +78,7 @@
 // Evaluate "x", if it is NULL, exit with a fatal error
 #define SF_PLUGIN_ASSERT_NOT_NULL(x) \
     { void *res; if ((res = (x)) == NULL) \
-        qFatal("QPA-SF: %s in %s returned %x", (#x), __func__, (unsigned int)res); }
+        qFatal("QPA-SF: %s in %s returned %p", (#x), __func__, res); }
 
 // Evaluate "x", if it doesn't return zero, exit with a fatal error
 #define SF_PLUGIN_ASSERT_ZERO(x) \
