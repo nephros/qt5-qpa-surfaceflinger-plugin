@@ -39,7 +39,7 @@ surfaceflinger for composing content onto the screen.
 export QTDIR=/usr/share/qt5
 cd surfaceflinger
 %qmake5
-make %{_smp_mflags}
+%make_build
 
 %install
 rm -rf %{buildroot}
