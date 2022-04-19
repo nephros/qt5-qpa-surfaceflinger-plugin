@@ -47,8 +47,8 @@ cd surfaceflinger
 %qmake5_install
 
 # doesn't exist on Qt 5.1, we don't currently care about this for 5.2
-rm -f %{buildroot}/usr/lib/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake
-rm -f %{buildroot}/usr/lib/cmake/Qt5Gui/Qt5Gui_QEglFSsfIntegrationPlugin.cmake
+rm -f %{buildroot}%{_libdir}/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake
+rm -f %{buildroot}%{_libdir}/cmake/Qt5Gui/Qt5Gui_QEglFSsfIntegrationPlugin.cmake
 
 %files
 %defattr(-,root,root,-)
